@@ -5,9 +5,9 @@ import org.apache.spark.mllib.linalg.DenseVector
 import org.apache.spark.rdd.RDD
 
 
-object TestFFM extends App {
+object TestFFM {
 
-  override def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit = {
 
     val sc = new SparkContext(new SparkConf().setAppName("TESTFFM").setMaster("local[4]"))
 

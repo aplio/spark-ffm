@@ -145,8 +145,6 @@ class FFMModel(val numFeatures: Int,
     1 / (1 + math.exp(-t))
   }
 
-  override protected def formatVersion: String = "1.0"
-
   override def save(sc: SparkContext, path: String): Unit = {
     val data = FFMModel.SaveLoadV1_0.Data(numFeatures, numFields, dim._1, dim._2, dim._3, n_iters, eta, regParam._1, regParam._2, isNorm, random, weights, sgd)
     FFMModel.SaveLoadV1_0.save(sc, path, data)
